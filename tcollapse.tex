@@ -6,8 +6,8 @@ twocolumn,
 % onecolumn,%!TEX encoding = UTF-8 Unicode
 nofootinbib,
 % ,secularistic%
-tightenlines %
-floatfix,
+% tightenlines %
+% floatfix,
  amsmath,
 showpacs ,amssymb, aps,% linenumber
 superscriptaddress
@@ -34,6 +34,8 @@ superscriptaddress
 \usepackage{extdash}
 \usepackage{colortbl}
 \usepackage{tikz}
+\usepackage{silence}
+\WarningFilter{revtex4-1}{Repair the float}
 
 
 \usepackage{booktabs}
