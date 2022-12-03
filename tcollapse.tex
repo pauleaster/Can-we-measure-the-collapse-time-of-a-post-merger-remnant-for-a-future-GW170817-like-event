@@ -27,7 +27,7 @@ superscriptaddress
 \usepackage{natbib}
 \usepackage{wasysym}
 \usepackage{aas_macros}
-\graphicspath{{images/}}
+% \graphicspath{{images/}}
 \RequirePackage{lineno}
 \usepackage[usenames,dvipsnames,table]{xcolor}
 \usepackage{appendix}
@@ -35,6 +35,7 @@ superscriptaddress
 \usepackage{colortbl}
 \usepackage{tikz}
 \usepackage{silence}
+\usepackage{balance}
 \WarningFilter{revtex4-1}{Repair the float}
 
 
@@ -164,14 +165,14 @@ superscriptaddress
     
 \begin{figure*}[t]
         \centering
-        \includegraphics[scale=0.35]{dec_tc10_dist_timeplot_panels.pdf}
+        \includegraphics[scale=0.35]{images/dec_tc10_dist_timeplot_panels.pdf}
         \caption{Time domain posterior waveforms for SLy equation of state with equal mass 1.35M${_\odot}$ progenitor (left panels) and measured collapse times (right panels) for injections with collapse times $\tc=5$\,ms~(top), $\tc=10$\,ms~(centre), and $\tc=15$\,ms~(bottom) injected into 2A+ detector network. Left panels show the numerical-relativity injections that have been forced to collapse (black curves) with the posterior waveforms (shaded blue curves). The right panels show the collapse-time posterior distributions for each numerical-relativity injection.
         The solid vertical lines on all panels shows  $\tc$ for the injected waveform. The dashed vertical lines shows  $\tc+\tw$ where the injected signal drops to zero due to the induced collapse. Here we show three loud injections from our injection study where $\tc$ are clearly recovered. The injected distances are 5.93\,Mpc, 3.04\,Mpc, and 1.00\,Mpc, for 5\,ms,  10\,ms, and  15\,ms respectively. The full posteriors for the $\tc=10\,$ms collapse time   injection are shown in the appendix (Fig~\ref{fig:FullCorner}).} 
         \label{fig:TimeResponse}
 \end{figure*}     
 \begin{figure*}[t]
     \centering
-    \includegraphics[scale=0.29]{MaximumDistancePanelLabelledGW170817.pdf}
+    \includegraphics[scale=0.29]{images/MaximumDistancePanelLabelledGW170817.pdf}
     \caption{Maximum distances for which the collapse time can be measured for different interferometer networks and equations of state. The vertical axis shows different equations of state and interferometer configurations, and the maximum detection distance is shown on the horizontal axis. The numerical-relativity simulations are injected with equations of state SLy (upward pointing triangle) and LS220 (downward pointing triangle). The interferometer configurations are 2A+ (blue), 2A+ with the proposed Neutron star Extreme Matter Observatory (orange), Einstein Telescope (green), and Einstein Telescope with Cosmic Explorer~(red). The top panel shows collapse times of 5\,ms, the centre panel 10\,ms and the lower panel 15\,ms collapse times. The  luminosity distance for GW170817 (gravitational-wave only) is shown in shaded grey for comparison~\cite{GW170817multi}.} 
     \label{fig:CollapseTimeDistanceGrid}
 \end{figure*}  
@@ -212,6 +213,7 @@ superscriptaddress
         s_{\varphi,\mathrm{c}}(t) & =  h_{\mathrm{NR},\varphi}(t)\mathcal{T}\left(t , \tc,\tw\right). \label{eq:scol}
     \end{align}
     To ensure that $s_{\varphi,\mathrm{c}}(t)$ has the required collapse time, $h_{\mathrm{NR},\varphi}(t)$ must emit post-merger gravitational waves for $t>\tc+\tw$.
+    \red{Our selection of a Tukey collapse window is somewhat arbitrary, though modifying this will not substantially change the quantitative conclusions.}
     In this paper we use two numerical-relativity simulations of binary neutron star mergers with equal mass $1.35\,\mathrm{M}_\odot$ progenitors that emit gravitational waves for $\sim~25$\,ms and sample collapse times of 5, 10, and 15\,ms.
     The two simulations use the SLy equation of state~\cite{Douchin2001} (simulation label \texttt{THC:0036:R03} from Refs.~\cite{Dietrich2018,Radice2016}) and LS220 equation of state~\cite{Lattimer1991} (simulation label \texttt{THC:0019:R05} from Refs.~\cite{Dietrich2018,Radice2017}).
     The dimensionless tidal-deformabilities of the progenitor neutron stars for the two simulations are 390 and 684 respectively, which are consistent with tidal deformabilities inferred from GW170817~\cite{GW170817Properties}.
@@ -266,7 +268,7 @@ superscriptaddress
     We calculate the signal-to-noise ratio at a fixed distance over the entire sky for each detector network.
     We then choose a sky position with a signal-to-noise ratio close to the mean all-sky signal-to-noise ratio, and perform all injections at this sky position for this detector network.
     The lower error bars show the largest distance where the collapse times are recovered, the upper error bars show the smallest distance where the collapse time recoveries fail, and the marker is placed in the midpoint between these distances.
-    If a post-merger collapse event occurs at a sky location near the antenna pattern maximum then the maximum distance where we can measure $\tc$ will increase by $\sim\!60\%$.
+    If a post-merger collapse event occurs at a sky location near the antenna pattern maximum then the maximum distance where we can \red{measure $\tc$ will increase by $\sim\!60\%$.}
     \par
     
     Detecting the collapse time of a GW170817-like event at a luminosity distance of $40^{+8}_{-14}$\,Mpc~\cite{GW170817multi} (Fig.~\ref{fig:CollapseTimeDistanceGrid}, shaded region, gravitational wave only) would require the combination of ET with CE for $\tc \sim\!10$\,ms,  or ET with $\tc \sim\!5$\,ms. 
@@ -303,7 +305,7 @@ superscriptaddress
     This leads to larger maximum detection distances for LS220 equations of state relative to SLy injections for $\tc\sim\!15$\,ms.
     The maximum detection distance for each detector network for $\tc\sim\!15$\,ms are $\sim 1.5, 2.7, 5.4, 7.4$\,Mpc for SLy injections, and $\sim 2.0, 8.0, 16, 23$\,Mpc for LS220 injections, for 2A+, 2A+ with NEMO, ET, and ET with CE, detectors respectively.
     The above distances assume an injection at a sky position corresponding to an average signal-to-noise ratio over the entire sky.
-    The detection distance would increase by $\sim\!60\%$ near an optimal sky position. \par
+    The detection distance would \red{increase by $\sim\!60\%$ near an optimal sky position.} \par
     
     We find that there are three predominant regions for detecting the collapse time. The first region, with small collapse times, is mainly limited by the Bayes Factor for the ratio of post-merger signal to noise. 
     For large collapse times, waveform systematics limit detections, specifically the inability of the model to track the phase of the gravitational-wave strain.
@@ -330,13 +332,14 @@ superscriptaddress
 
 \section{Acknowledgments}
         P.~D.~L. is supported through Australian Research Council (ARC) Future Fellowship FT160100112,  ARC Discovery Project DP180103155 and  ARC Centre of Excellence CE170100004. A.~R.~C. is supported in part by the Australian Research Council through a Discovery Early Career Researcher Award (DE190100656). Parts of this research were supported by the Australian Research Council Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D), through project number CE170100013. Parts of this work were performed on the OzSTAR national facility at Swinburne University of Technology. The OzSTAR program receives funding in part from the Astronomy National Collaborative Research Infrastructure Strategy (NCRIS) allocation provided by the Australian Government. The authors wish to acknowledge the public release of the Computational Relativity data at \url{http://www.computational-relativity.org}. We are grateful to Tim Dietrich for valuable comments on this manuscript.
+\balance
 \bibliography{CollapseTimeBib}
 
 \appendix
 % \raggedbottom
 %  \vfill\null
 % \pagebreak
-\clearpage
+% \clearpage
 
 % \raggedbottom
 % \renewcommand\thefigure{\thesection.\arabic{figure}} 
@@ -356,7 +359,7 @@ superscriptaddress
     We find that correlations between $\tc$ , $\tw$, and $T_0$ (the exponential decay time-constant for mode zero) make it very difficult to recover all three parameters simultaneously, even with analytic injections into zero noise.
     Fixing $\tw=2$\,ms allows recovery of all other parameters in both analytical injections with zero noise, and numerical-relativity injections with Gaussian noise.
     \vfill\null 
-    \pagebreak
+    % \pagebreak
     
     \begin{eqnarray}
         \log_{10}{H} & \sim & \mathcal{U}(-24, -17)\label{eq:firstprior}  \\
@@ -392,7 +395,7 @@ superscriptaddress
 \vspace{-0.5cm}
 \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.5]{{NRTCAnalyticRuns_index5.0_2xAplus_snr34.31_distance3.37_THC:0036:R03_tc10.0_ra2.37_dec1.49_seed9_znFalse_mod_corner}.pdf}
+        \includegraphics[scale=0.5]{{images/NRTCAnalyticRuns_index5.0_2xAplus_snr34.31_distance3.37_THC:0036:R03_tc10.0_ra2.37_dec1.49_seed9_znFalse_mod_corner}.pdf}
         \caption
         {Full posteriors corresponding to the $\tc=10\,$ms injection shown in Fig.~\ref{fig:TimeResponse}. The  numerical-relativity simulation is injected into a 2A+ detector network at a distance of 3.04\,Mpc with an SLy equation of state and equal-mass $1.35\,\msun$ neutron stars. Credible intervals of 68\% are shown as dashed blue lines in the one-dimensional posteriors. The injected collapse time is shown by the orange lines in the lower-most panels.} 
         \label{fig:FullCorner}
